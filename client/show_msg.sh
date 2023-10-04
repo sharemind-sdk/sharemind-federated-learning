@@ -1,0 +1,1 @@
+echo '\033[1;32mHello! Your client number: '$CLIENT_NUMBER'\033[0m'

@@ -1,0 +1,4 @@
+NUMBER_CLIENTS: 3
+NUMBER_ROUNDS: 200
+# ["mnist", "fashion", "cifar10", "casa"]
+DATA: "mnist"

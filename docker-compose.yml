@@ -1,0 +1,24 @@
+version: '3'
+
+services:
+  master:
+    build:
+      dockerfile: ./client/master.Dockerfile
+    ports:
+      - "443:8443"
+    volumes:
+      # - ./client/master/keys/cert.pem:/app/cert.pem
+      # - ./client/master/keys/key.pem:/app/key.pem
+      - ./src/app:/app
+      - ./conf.yml:/app/conf.yml
+    environment:
+      - FLASK_ENV=development
+    networks:
+      custom_network:
+        ipv4_address: 172.20.0.3
+    
+networks:
+  custom_network:
+    ipam:
+      config:
+        - subnet: 172.20.0.0/16
