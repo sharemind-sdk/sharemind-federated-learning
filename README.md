@@ -107,6 +107,15 @@ Also, to perform the following instructions with using Sharemind MPC, some licen
       $python3 src/ML/result_plot.py
       ```
 
+## Used Datasets
+- [MNIST](https://keras.io/api/datasets/mnist/)
+- [fashion MNIST](https://keras.io/api/datasets/fashion_mnist/)
+- [CIFAR10](https://keras.io/api/datasets/cifar10/)
+
+These will be downloaded via Keras library once `./src/ML/split.py` is executed.
+- Human Activity Recognition from Continuous Ambient Sensor Data (CASA)
+Original is [here](https://archive.ics.uci.edu/dataset/506/human+activity+recognition+from+continuous+ambient+sensor+data) but we use [the pre-processed one](https://archive.org/download/train_20211025) that one of our authors Sadi AlAwadi, Halmstad University, made.
+
 ## Warning
 
 Currently, there is, at least, one crucial bug. When you run the first, at the end of the first communication round, the program will crash. Please run again (the problem disappears).  
