@@ -35,7 +35,10 @@ Also, to perform the following instructions with using Sharemind MPC, some licen
       # For MNIST, (Fashion-MNIST), CIFAR10 (script downloads and splits into train&test datasets)
       (venv)$python ./src/ML/split.py
 
-      # For CASA (the dataset from http://archive.org/download/train_20211025/train.csv and stored it in /data)
+      # For CASA
+      # Download the dataset (127 MB):
+      wget http://archive.org/download/train_20211025/train.csv
+      # or curl -L http://archive.org/download/train_20211025/train.csv -o train.csv
       (venv)$python ./src/ML/create_data_partitions.py
       ```
 
@@ -114,7 +117,7 @@ Also, to perform the following instructions with using Sharemind MPC, some licen
 
 These three will be downloaded via Keras library once `./src/ML/split.py` is executed.
 - Human Activity Recognition from Continuous Ambient Sensor Data (CASA)  
-Original dataset can be found [here](https://archive.ics.uci.edu/dataset/506/human+activity+recognition+from+continuous+ambient+sensor+data) but we use [the pre-processed one](https://archive.org/download/train_20211025) that one of our authors Sadi AlAwadi, Halmstad University, made. This dataset is saved as `./data/train.csv`.
+Original dataset can be found [here](https://archive.ics.uci.edu/dataset/506/human+activity+recognition+from+continuous+ambient+sensor+data) but we use [the pre-processed one](https://archive.org/download/train_20211025) that one of our authors Sadi AlAwadi, Halmstad University, made.
 
 ## Warning
 

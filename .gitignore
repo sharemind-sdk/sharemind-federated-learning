@@ -21,4 +21,5 @@ out.init
 out.global
 debug.py
 model.txt
+train.csv
 _*.py

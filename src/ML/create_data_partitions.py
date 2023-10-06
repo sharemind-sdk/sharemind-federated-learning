@@ -12,7 +12,7 @@ import common as cm
 def import_data(test_ratio):
     """ Download data. """
     # data = pd.read_csv('http://archive.org/download/train_20211025/train.csv')
-    data = pd.read_csv(f"{cm.PROJECT_PATH}/data/train.csv")
+    data = pd.read_csv(f"{cm.PROJECT_PATH}/train.csv")
     data = data.sample(frac=1).reset_index(drop=True)
     print(data.head())
 
