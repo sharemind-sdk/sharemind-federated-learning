@@ -29,13 +29,14 @@ Also, to perform the following instructions with using Sharemind MPC, some licen
       $./init.sh
       ```
 
-3. Prepare the local datasets
+3. Prepare the local datasets  
+      See below for dataset details.
 
       ```sh
       # For MNIST, (Fashion-MNIST), CIFAR10 (script downloads and splits into train&test datasets)
       (venv)$python ./src/ML/split.py
 
-      # For CASA
+      # For CASA (Human Activity Recognition from Continuous Ambient Sensor Data)
       # Download the dataset (127 MB):
       wget http://archive.org/download/train_20211025/train.csv
       # or curl -L http://archive.org/download/train_20211025/train.csv -o train.csv
