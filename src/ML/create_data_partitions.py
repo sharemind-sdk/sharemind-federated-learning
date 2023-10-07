@@ -42,20 +42,20 @@ if __name__ == '__main__':
     trainsets = splitset(trainset, nr_of_datasets)
     testsets = splitset(testset, nr_of_datasets)
 
-    # for i in range(nr_of_datasets):
-    #     cm_path = f'{cm.PROJECT_PATH}/client/client{i + 1}/data/local/casa'
+    for i in range(nr_of_datasets):
+        cm_path = f'{cm.PROJECT_PATH}/client/client{i + 1}/data/local/casa'
 
-    #     train_X = trainsets[i].iloc[:, 1:37].values.reshape(-1, 1, 36)
-    #     train_y = trainsets[i].iloc[:, 37:]
-    #     test_X = testsets[i].iloc[:, 1:37].values.reshape(-1, 1, 36)
-    #     test_y = testsets[i].iloc[:, 37:]
-    #     print(train_X.shape, train_y.shape, test_X.shape, test_y.shape)
+        train_X = trainsets[i].iloc[:, 1:37].values.reshape(-1, 1, 36)
+        train_y = trainsets[i].iloc[:, 37:]
+        test_X = testsets[i].iloc[:, 1:37].values.reshape(-1, 1, 36)
+        test_y = testsets[i].iloc[:, 37:]
+        print(train_X.shape, train_y.shape, test_X.shape, test_y.shape)
 
-    #     with open(f"{cm_path}/x_train.pickle", 'wb') as f:
-    #         pickle.dump(train_X, f)
-    #     with open(f"{cm_path}/y_train.pickle", 'wb') as f:
-    #         pickle.dump(train_y, f)
-    #     with open(f"{cm_path}/x_test.pickle", 'wb') as f:
-    #         pickle.dump(test_X, f)
-    #     with open(f"{cm_path}/y_test.pickle", 'wb') as f:
-    #         pickle.dump(test_y, f)
+        with open(f"{cm_path}/x_train.pickle", 'wb') as f:
+            pickle.dump(train_X, f)
+        with open(f"{cm_path}/y_train.pickle", 'wb') as f:
+            pickle.dump(train_y, f)
+        with open(f"{cm_path}/x_test.pickle", 'wb') as f:
+            pickle.dump(test_X, f)
+        with open(f"{cm_path}/y_test.pickle", 'wb') as f:
+            pickle.dump(test_y, f)
